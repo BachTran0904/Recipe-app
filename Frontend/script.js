@@ -40,8 +40,6 @@ function displayRecipes(recipes) {
       recipeCard.innerHTML = `
         <h3>${recipe.title}</h3>
         <img src="${recipe.image}" alt="${recipe.title}">
-        <p><strong>Ready in:</strong> ${recipe.readyInMinutes} minutes</p>
-        <p><strong>Servings:</strong> ${recipe.servings}</p>
         <a href="https://spoonacular.com/recipes/${recipe.title.toLowerCase().replace(/ /g, '-')}-${recipe.id}" target="_blank">View Recipe</a>
       `;
   
