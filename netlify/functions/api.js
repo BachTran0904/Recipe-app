@@ -3,6 +3,7 @@ const serverless = require("serverless-http");
 const axios = require("axios");
 const cors = require("cors");
 const dotenv = require("dotenv");
+
 dotenv.config();
 
 const api = express();
@@ -40,4 +41,4 @@ router.get("/recipes", async (req, res) => {
 api.use("/api/", router);
 
 // Export the serverless function
-module.exports.handler = serverless(app);
+module.exports.handler = serverless(api);
