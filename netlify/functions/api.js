@@ -26,7 +26,7 @@ router.get("/recipes", async (req, res) => {
       params: {
         diet,
         includeIngredients: ingredients,
-        apiKey: process.env.SPOONACULAR_API_KEY, // Ensure this is set in your .env file
+        apiKey: '15a46fd22d804f3c98d440451746da82',
         number: 10, // Limit to 10 recipes
       },
     });
