@@ -1,0 +1,15 @@
+	
+service: my-express-application
+ 
+provider:
+  name: aws
+  runtime: nodejs20.12.2
+  stage: dev
+  region: us-east-1
+ 
+functions:
+  app:
+    handler: api.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

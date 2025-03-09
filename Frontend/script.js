@@ -10,7 +10,7 @@ document.getElementById('recipe-form').addEventListener('submit', async (e) => {
     }
   
     try {
-      const response = await fetch(`http://localhost:3000/api/recipes?diet=${diet}&ingredients=${ingredients}`);
+      const response = await fetch(`/api/recipes?diet=${diet}&ingredients=${ingredients}`);
       const data = await response.json();
   
       if (!response.ok) {
